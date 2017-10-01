@@ -55,9 +55,10 @@ BO_ 320 Throttle: 8 XXX
  SG_ Throttle : 40|8@1+ (0.392157,0) [0|255] "%" XXX
  SG_ Accelerator Pedal : 7|8@0+ (1,0) [0|255] "" XXX
  SG_ Engine Speed : 16|8@1+ (1,0) [0|255] "RPM" XXX
+ SG_ Clutch Position : 15|1@1+ (1,0) [0|3] "On/Off" XXX
 
-BO_ 209 NEW_MSG_1: 8 XXX
- SG_ BrakePosition : 23|8@0+ (1,0) [0|255] "" XXX
+BO_ 209 Brakes: 8 XXX
+ SG_ BrakePosition : 16|8@1+ (1,0) [0|255] "%" XXX
 
 BO_ 2 Steering: 8 XXX
  SG_ SteeringAngle : 7|16@0- (0.1,0) [-500|500] "degree" XXX
@@ -85,10 +86,13 @@ BO_ 212 Wheel Speed: 8 XXX
  SG_ Rear Left : 32|16@1+ (0.05747,0) [0|65535] "km/h" XXX
  SG_ Front Right : 16|16@1+ (0.05747,0) [0|65535] "km/h" XXX
 
+BO_ 321 Transmission: 8 XXX
+ SG_ Gear Indicator : 48|4@1+ (1,0) [0|15] "Gear" XXX
 
 
 
 
+CM_ SG_ 321 Gear Indicator "Derived value only while moving (uses engine speed)";
 VAL_ 324 CruiseEnabled 1 "On" 0 "Off" ;
 VAL_ 324 BrakeStatus 1 "On" 0 "Off" ;
 VAL_ 324 CruiseButtons 2 "Set" 1 "Resume" ;
