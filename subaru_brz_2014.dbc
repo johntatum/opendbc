@@ -77,6 +77,12 @@ BO_ 864 Temperature: 8 XXX
  SG_ Oil Temperature : 16|8@1+ (1,-40) [0|255] "" XXX
  SG_ Coolant Temperature : 24|8@1+ (1,-40) [0|255] "" XXX
 
+BO_ 212 Wheel Speed: 8 XXX
+ SG_ Front Left : 0|16@1+ (0.05747,0) [0|65535] "km/h" XXX
+ SG_ Rear Right : 48|16@1+ (0.05747,0) [0|65535] "km/h" XXX
+ SG_ Rear Left : 32|16@1+ (0.05747,0) [0|65535] "km/h" XXX
+ SG_ Front Right : 16|16@1+ (0.05747,0) [0|65535] "km/h" XXX
+
 
 
 
