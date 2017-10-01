@@ -73,6 +73,10 @@ BO_ 322 NEW_MSG_3: 8 XXX
 BO_ 208 Steering: 8 XXX
  SG_ Steering Angle : 0|16@1- (.1,0) [0|65535] "Degrees" XXX
 
+BO_ 864 Temperature: 8 XXX
+ SG_ Oil Temperature : 16|8@1+ (1,-40) [0|255] "" XXX
+ SG_ Coolant Temperature : 24|8@1+ (1,-40) [0|255] "" XXX
+
 
 
 
