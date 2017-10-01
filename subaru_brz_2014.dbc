@@ -33,7 +33,7 @@ NS_ :
 
 BS_:
 
-BU_: XXX 
+BU_: XXX
 
 
 BO_ 884 DoorStatus: 8 XXX
@@ -64,14 +64,14 @@ BO_ 642 NEW_MSG_2: 8 XXX
  SG_ TurnSignal : 45|2@0+ (1,0) [0|3] "" XXX
 
 BO_ 338 Lights: 8 XXX
- SG_ L : NaN|NaN@0+ (8,NaN) [8|NaN] "1" ,
  SG_ Lights : 59|5@0+ (1,8) [128|140] "" XXX
  SG_ NEW_SIGNAL_1 : 0|8@1+ (1,0) [0|255] "" XXX
 
 BO_ 322 NEW_MSG_3: 8 XXX
  SG_ NEW_SIGNAL_1 : 7|8@0+ (1,0) [0|16777215] "" XXX
 
-BO_ 208 NEW_MSG_4: 8 XXX
+BO_ 208 Steering: 8 XXX
+ SG_ Steering Angle : 0|16@1- (.1,0) [0|65535] "Degrees" XXX
 
 
 
@@ -82,4 +82,4 @@ VAL_ 324 BrakeStatus 1 "On" 0 "Off" ;
 VAL_ 324 CruiseButtons 2 "Set" 1 "Resume" ;
 VAL_ 324 BrakeApplied 1 "On" 0 "Off" ;
 VAL_ 642 TurnSignal 2 "Left" 1 "Right" ;
-CM_ "CHFFR_METRIC 2 STEER_ANGLE STEER_ANGLE 0.36 180"""
+CM_ "CHFFR_METRIC 2 STEER_ANGLE STEER_ANGLE 0.36 180"""";
