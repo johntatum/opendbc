@@ -73,6 +73,7 @@ BO_ 208 Steering: 8 XXX
 
 BO_ 864 Temperature: 8 XXX
  SG_ OilTemp : 16|8@1+ (1,-40) [0|255] "celsius" XXX
+ SG_ Coolant : 24|8@1+ (1,-40) [0|255] "Celsius" XXX
 
 BO_ 321 Transmission: 8 XXX
  SG_ GearIndicator : 0|0@0+ (8,0) [4|0] "1" ,
