@@ -72,21 +72,31 @@ BO_ 338 Lights: 8 XXX
 BO_ 322 NEW_MSG_3: 8 XXX
 
 BO_ 208 Steering: 8 XXX
- SG_ SteeringAngle : 0|16@1- (0.1,0) [|] "degrees" 1
 
 BO_ 864 Temperature: 8 XXX
  SG_ OilTemp : 16|8@1+ (1,-40) [0|255] "celsius" XXX
- SG_ CoolantTemp : 24|8@1+ (1,-40) [|] "celsius" XXX
 
 BO_ 321 Transmission: 8 XXX
  SG_ GearIndicator : 0|0@0+ (8,0) [4|0] "1" ,
 
 BO_ 880 NEW_MSG_1: 8 XXX
 
+BO_ 211 TractionControl: 8 XXX
+ SG_ VSCOnOff : 3|1@1+ (1,0) [0|1] "" XXX
+ SG_ SportMode : 11|1@1+ (1,0) [0|1] "" XXX
+ SG_ TractionOnOff : 5|1@1+ (1,0) [0|1] "" XXX
+ SG_ TractionVSCOnOff : 24|1@1+ (1,0) [0|1] "" XXX
+ SG_ StarterMotor : 28|4@1+ (1,0) [0|15] "" XXX
+
 
 
 
 CM_ SG_ 338 Lights "0 is off, 1 is running lights, 3 is on";
+CM_ SG_ 211 VSCOnOff "Partially turns off VSC";
+CM_ SG_ 211 SportMode "Turn on with VSC Off";
+CM_ SG_ 211 TractionOnOff "Partially turns TC off";
+CM_ SG_ 211 TractionVSCOnOff "Aggressively backs TC and VSC off";
+CM_ SG_ 211 StarterMotor "Starter motor or push to start command";
 VAL_ 324 CruiseEnabled 1 "On" 0 "Off" ;
 VAL_ 324 BrakeStatus 1 "On" 0 "Off" ;
 VAL_ 324 CruiseButtons 2 "Set" 1 "Resume" ;
