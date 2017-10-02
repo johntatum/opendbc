@@ -33,7 +33,7 @@ NS_ :
 
 BS_:
 
-BU_: XXX
+BU_: XXX r  1 + 8
 
 
 BO_ 884 DoorStatus: 8 XXX
@@ -42,6 +42,7 @@ BO_ 884 DoorStatus: 8 XXX
  SG_ DoorOpenRP : 26|1@0+ (1,0) [0|1] "" XXX
  SG_ DoorOpenRD : 27|1@0+ (1,0) [0|1] "" XXX
  SG_ DoorOpenHatch : 28|1@0+ (1,0) [0|1] "" XXX
+ SG_ FogLights : 14|1@1+ (1,0) [0|3] "on/off" XXX
 
 BO_ 324 CruiseControl: 7 XXX
  SG_ CruiseEnabled : 48|1@0+ (1,0) [0|0] "" XXX
@@ -53,9 +54,9 @@ BO_ 324 CruiseControl: 7 XXX
 
 BO_ 320 Throttle: 8 XXX
  SG_ Throttle : 40|8@1+ (0.392157,0) [0|255] "%" XXX
- SG_ Accelerator Pedal : 7|8@0+ (1,0) [0|255] "" XXX
- SG_ Engine Speed : 16|8@1+ (1,0) [0|255] "RPM" XXX
- SG_ Clutch Position : 15|1@1+ (1,0) [0|3] "On/Off" XXX
+ SG_ EngineSpeed : 16|14@1+ (1,0) [0|0] "rpm" ,
+ SG_ AcceleratorPedal : 0|8@1+ (0.392157,0) [0|0] "percent" r
+ SG_ ClutchPosition : 15|1@1+ (1,1) [0|0] "on/off" ,
 
 BO_ 209 Brakes: 8 XXX
  SG_ BrakePosition : 16|8@1+ (1,0) [0|255] "%" XXX
@@ -64,38 +65,31 @@ BO_ 2 Steering: 8 XXX
  SG_ SteeringAngle : 7|16@0- (0.1,0) [-500|500] "degree" XXX
 
 BO_ 642 NEW_MSG_2: 8 XXX
- SG_ TurnSignal : 45|2@0+ (1,0) [0|3] "" XXX
 
 BO_ 338 Lights: 8 XXX
- SG_ Lights : 59|5@0+ (1,8) [128|140] "" XXX
- SG_ NEW_SIGNAL_1 : 0|8@1+ (1,0) [0|255] "" XXX
+ SG_ HighBeam : 61|1@1+ (1,0) [0|1] "on/off" XXX
+ SG_ Lights : 58|2@1+ (1,0) [|] "" XXX
 
 BO_ 322 NEW_MSG_3: 8 XXX
- SG_ NEW_SIGNAL_1 : 7|8@0+ (1,0) [0|16777215] "" XXX
 
 BO_ 208 Steering: 8 XXX
- SG_ Steering Angle : 0|16@1- (.1,0) [0|65535] "Degrees" XXX
+ SG_ SteeringAngle : 0|16@1- (.1,0) [NaN|0] "degrees" 1
 
 BO_ 864 Temperature: 8 XXX
- SG_ Oil Temperature : 16|8@1+ (1,-40) [0|255] "" XXX
- SG_ Coolant Temperature : 24|8@1+ (1,-40) [0|255] "" XXX
-
-BO_ 212 Wheel Speed: 8 XXX
- SG_ Front Left : 0|16@1+ (0.05747,0) [0|65535] "km/h" XXX
- SG_ Rear Right : 48|16@1+ (0.05747,0) [0|65535] "km/h" XXX
- SG_ Rear Left : 32|16@1+ (0.05747,0) [0|65535] "km/h" XXX
- SG_ Front Right : 16|16@1+ (0.05747,0) [0|65535] "km/h" XXX
+ SG_ OilTemperature : 16|8@1+ (0,-40) [|] "degrees" +
+ SG_ CoolantTemperature : 16|8@1+ (0,0) [|] "degrees" 8
 
 BO_ 321 Transmission: 8 XXX
- SG_ Gear Indicator : 48|4@1+ (1,0) [0|15] "Gear" XXX
+ SG_ GearIndicator : 0|0@0+ (8,0) [4|0] "1" ,
+
+BO_ 880 NEW_MSG_1: 8 XXX
 
 
 
 
-CM_ SG_ 321 Gear Indicator "Derived value only while moving (uses engine speed)";
+CM_ SG_ 338 Lights "00 = off, 01 = running lights, 11 = lights on";
 VAL_ 324 CruiseEnabled 1 "On" 0 "Off" ;
 VAL_ 324 BrakeStatus 1 "On" 0 "Off" ;
 VAL_ 324 CruiseButtons 2 "Set" 1 "Resume" ;
 VAL_ 324 BrakeApplied 1 "On" 0 "Off" ;
-VAL_ 642 TurnSignal 2 "Left" 1 "Right" ;
 CM_ "CHFFR_METRIC 2 STEER_ANGLE STEER_ANGLE 0.36 180"""";
