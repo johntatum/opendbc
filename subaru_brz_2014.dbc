@@ -33,7 +33,7 @@ NS_ :
 
 BS_:
 
-BU_: XXX r  1 + 8
+BU_: XXX r 1 + 8 
 
 
 BO_ 884 DoorStatus: 8 XXX
@@ -53,10 +53,9 @@ BO_ 324 CruiseControl: 7 XXX
  SG_ BrakeApplied : 8|1@0+ (1,0) [0|0] "" XXX
 
 BO_ 320 Throttle: 8 XXX
- SG_ AcceleratorPedal : 0|8@1+ (0.392157,0) [0|100] "percent" r
  SG_ ClutchPosition : 15|1@1+ (1,1) [0|-5] "on/off" ,
- SG_ EngineSpeed : 16|14@1+ (1,0) [|] "rpm" ,
- SG_ Throttle : 40|8@1+ (0.392157,0) [0|100] "percent" XXX
+ SG_ AcceleratorPedal : 0|8@1+ (0.392157,0) [0|100] "%" r
+ SG_ Throttle : 40|8@1+ (0.392157,0) [0|100] "%" XXX
 
 BO_ 209 Brakes: 8 XXX
  SG_ BrakePosition : 16|8@1+ (1,0) [0|255] "%" XXX
@@ -68,16 +67,14 @@ BO_ 642 NEW_MSG_2: 8 XXX
 
 BO_ 338 Lights: 8 XXX
  SG_ HighBeam : 61|1@1+ (1,0) [0|1] "on/off" XXX
- SG_ Lights : 58|2@1+ (1,0) [|] "" XXX
+ SG_ Lights : 58|2@1+ (1,0) [0|3] "enum" XXX
 
 BO_ 322 NEW_MSG_3: 8 XXX
 
 BO_ 208 Steering: 8 XXX
- SG_ SteeringAngle : 0|16@1- (.1,0) [NaN|0] "degrees" 1
+ SG_ SteeringAngle : 0|16@1- (0.1,0) [|] "degrees" 1
 
 BO_ 864 Temperature: 8 XXX
- SG_ OilTemperature : 16|8@1+ (0,-40) [|] "degrees" +
- SG_ CoolantTemperature : 16|8@1+ (0,0) [|] "degrees" 8
 
 BO_ 321 Transmission: 8 XXX
  SG_ GearIndicator : 0|0@0+ (8,0) [4|0] "1" ,
@@ -87,7 +84,7 @@ BO_ 880 NEW_MSG_1: 8 XXX
 
 
 
-CM_ SG_ 338 Lights "00 = off, 01 = running lights, 11 = lights on";
+CM_ SG_ 338 Lights "0 is off, 1 is running lights, 3 is on";
 VAL_ 324 CruiseEnabled 1 "On" 0 "Off" ;
 VAL_ 324 BrakeStatus 1 "On" 0 "Off" ;
 VAL_ 324 CruiseButtons 2 "Set" 1 "Resume" ;
