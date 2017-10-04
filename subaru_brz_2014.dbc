@@ -68,8 +68,10 @@ BO_ 338 Lights: 8 XXX
  SG_ EBrakeOnOff : 57|1@1+ (1,0) [0|3] "" XXX
 
 BO_ 322 NEW_MSG_3: 8 XXX
+ SG_ NEW_SIGNAL_1 : 16|8@1+ (1,0) [|] "" XXX
 
 BO_ 208 Steering: 8 XXX
+ SG_ SteeringAngle : 0|16@1+ (1,0.1) [0|65535] "degrees" XXX
 
 BO_ 864 Temperature: 8 XXX
  SG_ Coolant : 24|8@1+ (1,-40) [0|255] "Celsius" XXX
