@@ -67,8 +67,8 @@ BO_ 642 NEW_MSG_2: 8 XXX
 
 BO_ 338 Lights: 8 XXX
  SG_ Lights : 58|2@1+ (1,0) [0|3] "enum" XXX
- SG_ EBrakeOnOff : 57|1@1+ (1,0) [0|3] "" XXX
  SG_ HighBeam : 61|1@1+ (1,0) [0|1] "on/off" XXX
+ SG_ EBrakeOnOff : 51|1@1+ (1,0) [0|3] "" XXX
 
 BO_ 322 NEW_MSG_3: 8 XXX
 
