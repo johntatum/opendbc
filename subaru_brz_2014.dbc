@@ -50,10 +50,12 @@ BO_ 324 CruiseControl: 7 XXX
  SG_ BrakeApplied : 8|1@0+ (1,0) [0|0] "" XXX
 
 BO_ 320 Throttle: 8 XXX
+ SG_ EngineSpeed : 16|14@1+ (1,0) [0|255] "rpm" XXX
  SG_ ClutchPosition : 15|1@1+ (1,1) [0|-5] "on/off" ,
  SG_ AcceleratorPedal : 0|8@1+ (0.392157,0) [0|100] "%" r
- SG_ Throttle : 40|8@1+ (0.392157,0) [0|100] "%" XXX
- SG_ EngineSpeed : 16|14@1+ (1,0) [0|255] "rpm" XXX
+ SG_ ThrottlePosition : 32|8@1+ (0.392157,0) [0|0] "%" XXX
+ SG_ ThrottlePosition2 : 40|8@1+ (0.392157,0) [0|0] "%" XXX
+ SG_ NEW_SIGNAL_1 : 48|8@1+ (1,0) [0|255] "" XXX
 
 BO_ 209 Brakes: 8 XXX
  SG_ BrakePosition : 16|8@1+ (1,0) [0|255] "%" XXX
