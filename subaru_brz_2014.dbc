@@ -53,6 +53,7 @@ BO_ 320 Throttle: 8 XXX
  SG_ ClutchPosition : 15|1@1+ (1,1) [0|-5] "on/off" ,
  SG_ AcceleratorPedal : 0|8@1+ (0.392157,0) [0|100] "%" r
  SG_ Throttle : 40|8@1+ (0.392157,0) [0|100] "%" XXX
+ SG_ EngineSpeed : 16|14@1+ (1,0) [0|255] "rpm" XXX
 
 BO_ 209 Brakes: 8 XXX
  SG_ BrakePosition : 16|8@1+ (1,0) [0|255] "%" XXX
