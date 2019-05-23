@@ -1,0 +1,122 @@
+VERSION ""
+
+
+NS_ :
+    NS_DESC_
+    CM_
+    BA_DEF_
+    BA_
+    VAL_
+    CAT_DEF_
+    CAT_
+    FILTER
+    BA_DEF_DEF_
+    EV_DATA_
+    ENVVAR_DATA_
+    SGTYPE_
+    SGTYPE_VAL_
+    BA_DEF_SGTYPE_
+    BA_SGTYPE_
+    SIG_TYPE_REF_
+    VAL_TABLE_
+    SIG_GROUP_
+    SIG_VALTYPE_
+    SIGTYPE_VALTYPE_
+    BO_TX_BU_
+    BA_DEF_REL_
+    BA_REL_
+    BA_DEF_DEF_REL_
+    BU_SG_REL_
+    BU_EV_REL_
+    BU_BO_REL_
+    SG_MUL_VAL_
+
+BS_:
+
+BU_: XXX r 1 + 8 
+
+
+BO_ 884 DoorStatus: 8 XXX
+ SG_ DoorOpenFD : 24|1@0+ (1,0) [0|1] "" XXX
+ SG_ DoorOpenFP : 25|1@0+ (1,0) [0|1] "" XXX
+ SG_ FogLights : 14|1@1+ (1,0) [0|3] "on/off" XXX
+
+BO_ 324 CruiseControl: 7 XXX
+ SG_ CruiseEnabled : 48|1@0+ (1,0) [0|0] "" XXX
+ SG_ BrakeStatus : 51|1@0+ (1,0) [0|0] "" XXX
+ SG_ CruiseButtons : 4|2@0+ (1,0) [0|3] "" XXX
+ SG_ ThrottleInput : 16|8@1+ (1,0) [0|255] "" XXX
+ SG_ BrakeApplied : 8|1@0+ (1,0) [0|0] "" XXX
+ SG_ CruiseStartStop : 2|1@1+ (1,0) [0|1] "" XXX
+
+BO_ 320 Throttle: 8 XXX
+ SG_ EngineSpeed : 16|14@1+ (1,0) [0|255] "rpm" XXX
+ SG_ AcceleratorPedal : 0|8@1+ (0.392157,0) [0|100] "%" r
+ SG_ ThrottlePosition : 32|8@1+ (0.392157,0) [0|0] "%" XXX
+ SG_ ThrottlePosition2 : 40|8@1+ (0.392157,0) [0|0] "%" XXX
+ SG_ ClutchPosition : 15|1@1+ (1,1) [0|-5] "on/off" ,
+ SG_ NEW_SIGNAL_1 : 48|8@1+ (1,0) [0|255] "" XXX
+
+BO_ 209 Brakes: 8 XXX
+ SG_ BrakePosition : 16|8@1+ (1,0) [0|255] "%" XXX
+ SG_ VehicleSpeed : 0|16@1- (0.03729024239,0) [0|255] "MPH" XXX
+
+BO_ 2 Steering: 8 XXX
+ SG_ SteeringAngle : 7|16@0- (0.1,0) [-500|500] "degree" XXX
+
+BO_ 642 NEW_MSG_2: 8 XXX
+
+BO_ 338 Lights: 8 XXX
+ SG_ Lights : 58|2@1+ (1,0) [0|3] "enum" XXX
+ SG_ HighBeam : 61|1@1+ (1,0) [0|1] "on/off" XXX
+ SG_ EBrakeOnOff : 51|1@1+ (1,0) [0|3] "" XXX
+
+BO_ 322 NEW_MSG_3: 8 XXX
+
+BO_ 208 Steering: 8 XXX
+ SG_ SteeringAngle : 0|16@1- (0.1,0) [-500|500] "degrees" XXX
+
+BO_ 864 Temperature: 8 XXX
+ SG_ CoolantTemp : 24|8@1+ (1,-40) [0|255] "Celsius" XXX
+ SG_ OilTemp : 16|8@1+ (1,-40) [0|255] "Celsius" XXX
+
+BO_ 321 Transmission: 8 XXX
+ SG_ GearIndicator : 0|0@0+ (8,0) [4|0] "1" ,
+
+BO_ 880 NEW_MSG_1: 8 XXX
+
+BO_ 211 TractionControl: 8 XXX
+ SG_ VSCOnOff : 3|1@1+ (1,0) [0|1] "" XXX
+ SG_ SportMode : 11|1@1+ (1,0) [0|1] "" XXX
+ SG_ TractionOnOff : 5|1@1+ (1,0) [0|1] "" XXX
+ SG_ TractionVSCOnOff : 24|1@1+ (1,0) [0|1] "" XXX
+ SG_ StarterMotor : 28|4@1+ (1,0) [0|15] "" XXX
+
+BO_ 885 Doors: 8 XXX
+ SG_ ToggleLocks : 16|2@1+ (1,0) [0|3] "" XXX
+ SG_ DoorsLocked : 0|2@1+ (1,0) [0|3] "" XXX
+
+BO_ 24 NEW_MSG_4: 8 XXX
+
+BO_ 212 WheelSpeed: 8 XXX
+ SG_ WheelSpeed1 : 0|16@1- (0.03729024239,0) [0|255] "MPH" XXX
+ SG_ WheelSpeed2 : 16|16@1- (0.03729024239,0) [0|255] "" XXX
+ SG_ WheelSpeed3 : 32|16@1- (0.03729024239,0) [0|255] "MPH" XXX
+ SG_ WheelSpeed4 : 48|16@1- (0.03729024239,0) [0|255] "MPH" XXX
+
+
+
+
+CM_ SG_ 338 Lights "0 is off, 1 is running lights, 3 is on";
+CM_ SG_ 211 VSCOnOff "Partially turns off VSC";
+CM_ SG_ 211 SportMode "Turn on with VSC Off";
+CM_ SG_ 211 TractionOnOff "Partially turns TC off";
+CM_ SG_ 211 TractionVSCOnOff "Aggressively backs TC and VSC off";
+CM_ SG_ 211 StarterMotor "Starter motor or push to start command";
+CM_ SG_ 885 ToggleLocks "0";
+CM_ SG_ 885 DoorsLocked "0 is locked. 1 is unlocked";
+VAL_ 324 CruiseEnabled 1 "On" 0 "Off" ;
+VAL_ 324 BrakeStatus 1 "On" 0 "Off" ;
+VAL_ 324 CruiseButtons 2 "Set" 1 "Resume" ;
+VAL_ 324 BrakeApplied 1 "On" 0 "Off" ;
+CM_ "CHFFR_METRIC 2 STEER_ANGLE STEER_ANGLE 0.36 180"""";
